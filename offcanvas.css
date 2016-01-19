@@ -18,7 +18,7 @@ body {
     height: 100vh;
 	background-color: grey;
 	padding: 15px 40px 20px 40px;
-	background-image: url("img/_PIC8041_.jpg"); 
+	background-image: url("./img/_PIC8041_.jpg"); 
 	background-position: 70% 0%;
 	    background-size: cover;
 	
