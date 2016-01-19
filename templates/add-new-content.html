@@ -1,0 +1,23 @@
+<form name="addNewContent" class="form-horizontal" ng-submit="AddNewConCtrl.addNewContent(AddNewConCtrl.conName)" novalidate>
+<fieldset>
+
+<!-- Form Name -->
+<legend>Content Name</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Name">Name</label>  
+  <div class="col-md-5">
+  <input id="Name" name="Name" type="text" placeholder="name" class="form-control input-md" required="" ng-model="AddNewConCtrl.conName">
+  <span class="help-block">Content name</span>  
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <div class="col-md-4">
+    <button id="addCTSubmit" name="addNewConSubmit" class="btn btn-primary" type="submit" ng-disabled="!addNewContent.$valid">Save and add fields</button>
+  </div>
+</div>	
+</fieldset>
+</form>

@@ -1,0 +1,37 @@
+<form name="addContentTypefield" class="form-horizontal" ng-submit="editCTCtrl.addCT_Field(editCTCtrl.fieldType)" novalidate>
+<fieldset>
+
+<!-- Form Name -->
+<legend>Content Type: {{editCTCtrl.record.name}}</legend>
+	
+	
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Field Type</label>
+  <div class="col-md-4">
+    <select id="selectbasic" name="selectbasic" class="form-control" ng-model="editCTCtrl.fieldType">
+      <option value="text">Text</option>
+      <option value="text_area">Text Area</option>
+      <option value="list">List</option>
+      <option value="email">Email</option>
+      <option value="radio">Radio</option>
+      <option value="checkbox">Checkbox</option>
+      <option value="date">Date</option>
+      <option value="file">File</option>
+    </select>
+  </div>
+</div>	
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
+  <div class="col-md-4">
+    <button id="addCTSubmit" name="addCTSubmit" class="btn btn-primary" type="submit" ng-disabled="!addContentTypefield.$valid">Add field</button>
+  </div>
+</div>	
+</fieldset>
+</form>
+
+<ul>
+<li ng-repeat="field in editCTCtrl.fields"><a ui-sref="admin.settings.editContentType">{{field.type}}</a></li>
+
+</ul>

@@ -1,0 +1,24 @@
+<form name="addContentType" class="form-horizontal" ng-submit="addCTCtrl.addNewCT(addCTCtrl.ctName)" novalidate>
+<fieldset>
+
+<!-- Form Name -->
+<legend>Content Type Name</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Name">Name</label>  
+  <div class="col-md-5">
+  <input id="Name" name="Name" type="text" placeholder="name" class="form-control input-md" required="" ng-model="addCTCtrl.ctName">
+  <span class="help-block">Content type name</span>  
+  </div>
+</div>
+	
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
+  <div class="col-md-4">
+    <button id="addCTSubmit" name="addCTSubmit" class="btn btn-primary" type="submit" ng-disabled="!addContentType.$valid">Save and add fields</button>
+  </div>
+</div>	
+</fieldset>
+</form>

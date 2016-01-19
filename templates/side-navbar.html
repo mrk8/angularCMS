@@ -1,0 +1,20 @@
+<!-- /side navbar -->	  
+<div  class="col-xs-6 col-sm-3 sidebar-offcanvas " ng-class="{'sidebar-active': clCtrl.isActive}"
+id="sidebar">
+        
+	<div class="list-group">
+             <div class=" right-menu-header list-group-item">
+				 <a  ng-click="clCtrl.activeButton()"><span class="glyphicon glyphicon-option-vertical unspin" ng-class="{'spin': clCtrl.isActive}"></span></a>
+			</div>
+		<div>
+			<a ui-sref="photos.gallery" ui-sref-active="active" class="list-group-item" ng-click="clCtrl.activeButton()">Photography</a>
+            <a href="http://github.com" class="list-group-item">Github</a>
+            <a href="#" class="list-group-item" ng-click="clCtrl.activeButton()">Blog</a>
+            <a href="http://news.google.com" class="list-group-item">News</a>
+          </div>
+		
+          </div>
+	<div class="left-blank">
+		This space intentionally left blank.
+		</div>
+</div><!--/.sidebar-offcanvas-->

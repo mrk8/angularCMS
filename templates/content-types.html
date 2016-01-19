@@ -1,0 +1,8 @@
+<a ui-sref="admin.settings.addContentType">Add Content type</a>
+	
+<div 	
+<ul>
+<li ng-repeat="( key, content ) in CTCtrl.contentTypes "><a ui-sref="admin.settings.editContentType({mn:content.machineName, id: content.$id})">{{content.name}}</a></li>
+
+</ul>
+

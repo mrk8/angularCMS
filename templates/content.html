@@ -1,0 +1,25 @@
+<!--
+<a ui-sref="admin.settings.addContentType">Add Content </a>
+-->
+	
+<div>
+	
+<form name="addNewContent" ng-submit="CTCtrl.addNewContent(CTCtrl.contentType)" novalidate>
+	<select  ng-model="CTCtrl.contentType">
+		<option ng-repeat="( key, content ) in CTCtrl.contentTypes"  value="{{content.machineName}}">{{content.name}}</option>
+	</select>
+	
+	{{CTCtrl.machineName}}
+
+	<input type="submit" class="btn btn-success btn-small"  value="Add Content">
+	
+</form>
+
+<ul>
+<li ng-repeat="( key, content ) in CTCtrl.content "><a ui-sref="admin.settings.editContent({machineName: content.machineName, id: content.$id})">{{content.name}}</a></li>
+
+</ul>
+
+</div>
+
+
