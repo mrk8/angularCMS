@@ -176,7 +176,7 @@ overflow: auto;
 color: white;
 font-size: 1em;
 padding: 0px 40px 50px 40px;
-background-image: url("img/gallery/_BM13705lrg.jpg"); 
+background-image: url("img/gallery/BM13705lrg.jpg"); 
 background-position: 50% 50%;
 background-size: cover;
 height: 100vh;
@@ -588,7 +588,7 @@ a.list-group-item, button.list-group-item {
 .navbar{
 background-color: rgba(0, 0, 0, 0.99);
 	border-color: rgba(0, 0, 0, 0.99);
-	background-image: url("img/_PIC8041_.jpg"); 
+	background-image: url("img/janes_addiction.jpg"); 
 	background-position: 70% 0%;
 	border: 0px solid transparent;
 }
