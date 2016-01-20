@@ -36,6 +36,9 @@ angular
 			})
 			.state('admin.settings.newContent',{
 				url:'/add-new-content/:machineName',
+				params: {
+					id: null,
+				  },
 				controller : 'AddNewContentController',
 				controllerAs : 'AddNewConCtrl',
 				templateUrl: 'templates/add-new-content.html'

@@ -6,7 +6,7 @@ function editContentType(_fbContentTypes, $firebaseArray, $state, $stateParams){
 	if ( !this.key ){$state.go('admin.settings.contentTypes');}
 	this.contentType = _fbContentTypes;
 	var index = this.contentType.$indexFor(this.key);
-	this.record = this.contentType[index] 
+	this.record = this.contentType[index]; 
 	var rec = this.contentType.$getRecord(this.key);
 	this.fields = rec.fields;
 	console.log(rec.fields );

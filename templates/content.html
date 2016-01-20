@@ -4,12 +4,12 @@
 	
 <div>
 	
-<form name="addNewContent" ng-submit="CTCtrl.addNewContent(CTCtrl.contentType)" novalidate>
-	<select  ng-model="CTCtrl.contentType">
-		<option ng-repeat="( key, content ) in CTCtrl.contentTypes"  value="{{content.machineName}}">{{content.name}}</option>
+<form name="addNewContent" ng-submit="CTCtrl.addNewContent(CTCtrl.contentTypeID)" novalidate>
+	<select  ng-model="CTCtrl.contentTypeID">
+		<option ng-repeat="( key, content ) in CTCtrl.contentTypes"  value="{{content.$id}}">{{content.name}}</option>
 	</select>
 	
-	{{CTCtrl.machineName}}
+	{{CTCtrl.contentTypeID}}
 
 	<input type="submit" class="btn btn-success btn-small"  value="Add Content">
 	

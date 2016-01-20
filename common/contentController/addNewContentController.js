@@ -7,17 +7,18 @@
 *********************************************/			
 function addNewContent(_fbContent, $firebaseArray, $state ,$stateParams){
 	
-	this.zzz = $stateParams.machineName;
-	console.log(this.zzz);
+	this.contentType = $stateParams.machineName;
+	this.contentTypeID = $stateParams.id;
+	console.log(this.contentTypeID);
 	var Content = _fbContent;
-	this.addNewContent = function(form){
+	this.addNewContent = function(ContentName){
 		
 		//alert(form);
 		this.dateAdded = new Date().getTime();
-		var mn = form.toLowerCase().replace(/[ -_]/g,"-");;
-		var add = {name:form, machineName:mn, dateAdded:this.dateAdded};
+		var mn = ContentName.toLowerCase().replace(/[ -_]/g,"-");;
+		var add = {name: ContentName, machineName: mn, dateAdded: this.dateAdded, contentType: this.contentType, contentTypeID: this.contentTypeID  };
 		Content.$add(add);
-		form = {};
+		ContentName = {};
 		
 		$state.go('admin.settings.content');
 	}

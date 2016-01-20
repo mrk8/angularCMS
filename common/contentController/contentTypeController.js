@@ -4,9 +4,19 @@ function ContentType(_fbContentTypes, _fbContent, $firebaseArray, $state, $state
 	
 	this.contentTypes = _fbContentTypes;
 	this.content = _fbContent;
-	this.addNewContent = function(machineName){
-	console.log(machineName);	
-	$state.go('admin.settings.newContent', {machineName: machineName } );
+	
+	this.addNewContent = function(key){
+	console.log(key);	
+	
+	var rec = this.contentTypes.$getRecord(key);	
+	var index = this.contentTypes.$indexFor(key);	
+	console.log(rec.machineName);
+
+		
+	//rec.push({ contentTypeID: key });
+
+		
+	$state.go('admin.settings.newContent', {machineName: rec.machineName, id: key} );
 	}
 	
 
